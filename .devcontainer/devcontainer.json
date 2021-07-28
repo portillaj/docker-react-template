@@ -11,7 +11,7 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/zsh",
-		"workbench.colorTheme": "codeSTACKr Theme",
+		"workbench.colorTheme": "Winter is Coming Theme",
 		"editor.tabSize": 2
 	},
 
@@ -29,7 +29,7 @@
 		"esbenp.prettier-vscode",
 		"sibiraj-s.vscode-scss-formatter",
 		"gencer.html-slim-scss-css-class-completion",
-		"codestackr.codestackr-theme"
+		"johnpapa.winteriscoming"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
