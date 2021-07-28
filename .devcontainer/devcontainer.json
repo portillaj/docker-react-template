@@ -1,0 +1,45 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.163.1/containers/javascript-node
+{
+	"name": "Node.js",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 10, 12, 14
+		"args": { "VARIANT": "14" }
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/zsh",
+		"workbench.colorTheme": "codeSTACKr Theme",
+		"editor.tabSize": 2
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"coenraads.bracket-pair-colorizer",
+		"formulahendry.auto-close-tag",
+		"steoates.autoimport",
+		"ecmel.vscode-html-css",
+		"abusaidm.html-snippets",
+		"zignd.html-css-class-completion",
+		"eg2.vscode-npm-script",
+		"christian-kohler.npm-intellisense",
+		"esbenp.prettier-vscode",
+		"sibiraj-s.vscode-scss-formatter",
+		"gencer.html-slim-scss-css-class-completion",
+		"codestackr.codestackr-theme"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [3000],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// use CHOKIDAR_USEPOLLING": "true" for hot reload react
+	"postCreateCommand": "npm install",
+	"containerEnv": { "CHOKIDAR_USEPOLLING": "true" },
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node"
+}
